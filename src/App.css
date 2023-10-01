@@ -1,0 +1,8 @@
+.rupeeShade{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+.badge {
+    top: 0.5rem;
+    right: 0.5rem
+}
