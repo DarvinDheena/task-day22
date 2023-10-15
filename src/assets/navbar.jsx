@@ -1,7 +1,13 @@
-const Navbar = ()=>{
+import { useContext, useState } from "react";
+
+
+const Navbar = (props )=>{
+    const display = {
+        display:'none'
+    }
     return(
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar  navbar-expand-lg navbar-light bg-light">
               <div className="container px-4 px-lg-5">
                   <a className="navbar-brand" href="#!">Start Bootstrap</a>
                   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
@@ -20,11 +26,13 @@ const Navbar = ()=>{
                           </li>
                       </ul>
                       <form className="d-flex">
-                          <button className="btn btn-outline-dark" type="submit">
-                              <i className="bi-cart-fill me-1"></i>
-                              Cart
-                              <span className="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                          </button>
+                          <div className="btn btn-outline-dark"   id='cartBtn'>
+                                <i className="bi-cart-fill me-1"></i>
+                               
+                              <span className="badge bg-dark text-white ms-1 rounded-pill" id='cartValue' >Cart : { props.cart } </span>
+                              
+                          </div>
+                         
                       </form>
                   </div>
               </div>
@@ -33,4 +41,4 @@ const Navbar = ()=>{
     )
   }
 
-  export default Navbar;
+export default Navbar  
